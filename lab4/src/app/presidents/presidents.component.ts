@@ -1,8 +1,9 @@
 import { AfterViewInit, Component } from '@angular/core';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-presidents',
-  imports: [],
+  imports: [NgFor],
   templateUrl: './presidents.component.html',
   styleUrl: './presidents.component.css'
 })

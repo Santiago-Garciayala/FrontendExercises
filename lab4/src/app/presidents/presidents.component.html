@@ -1,5 +1,6 @@
 <h2>With ngFor</h2>
 <ul id="presList">
+  <!-- requires an import -->
   <li *ngFor="let pres of presidents">
     {{pres['name']}} {{pres['term']}}
   </li>
@@ -15,6 +16,7 @@
 
 <h2>With &#64;for</h2>
 <ol>
+  <!-- Using a directive for a better implementation -->
   @for(pres of presidents; track pres){
     <li>{{pres['name']}} {{pres['term']}}</li>
   }

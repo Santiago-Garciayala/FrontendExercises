@@ -1,0 +1,7 @@
+<h1>Students</h1>
+<ul>
+  <!-- No need for import with @for -->
+  @for(student of students; track student){
+  <li>{{student.id}}, {{student.name}}, {{student.address}}</li>
+  }
+</ul>

@@ -1,0 +1,37 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Movies
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  @for(movie of movies; track movie){
+
+    <ion-card>
+    <img alt="movie poster" src={{movie.Poster}} />
+      <ion-card-header>
+        <ion-card-title>{{movie.Title}}</ion-card-title>
+        <ion-card-subtitle>{{movie.Year}}</ion-card-subtitle>
+      </ion-card-header>
+    </ion-card>
+  }
+  <!--
+  <ul>
+    @for(movie of movies; track movie){
+    <li>
+      <h2>{{movie.Title}}</h2>
+      <h4>{{movie.Year}}</h4>
+        <img [src]="movie.Poster">
+    </li>
+    }
+  </ul>
+  -->
+</ion-content>

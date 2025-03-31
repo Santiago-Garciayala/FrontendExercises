@@ -1,0 +1,36 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>Status Page</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Status Page</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <!--
+  @for(emotion of emotions; track emotion){
+    <ion-radio>{{emotion}}</ion-radio>
+    <br>
+  }
+  -->
+
+  <ion-list>
+    <ion-radio-group [(ngModel)]="status">
+      @for(emotion of emotions; track emotion){
+      <ion-item>
+        <ion-label>{{emotion}}</ion-label>
+        <ion-radio slot="end" value={{emotion}}> </ion-radio>
+      </ion-item>
+    }
+    </ion-radio-group>
+  </ion-list>
+
+  <ion-button (click)="onBtnClick()">Save</ion-button>
+</ion-content>
